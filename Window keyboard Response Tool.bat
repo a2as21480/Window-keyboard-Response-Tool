@@ -1,10 +1,10 @@
 @echo off
 title Window Keboard Response tool
-echo ½ÇÇà ÇÏ½Ã°Ú½À´Ï±î(Y/N)?
+echo ì‹¤í–‰ í•˜ì‹œê² ìŠµë‹ˆê¹Œ(Y/N)?
 echo.
 set /p a=
 if %a%==y goto excution
-if %a%==y goto exit
+if %a%==n goto exit
 
 :excution
 reg add "HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response" /v AutoRepeatDelay  /d 200 /f
@@ -16,9 +16,9 @@ reg add "HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response" /v "La
 reg add "HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response" /v "Last Valid Delay" /t REG_DWORD /d 200 /f
 reg add "HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response" /v "Last Valid Repeat" /t REG_DWORD /d 1 /f
 reg add "HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response" /v "Last Valid Wait" /t REG_DWORD /d 0 /f
-rem echo Last ~ ´Â ¸ğµÎ ±âº»°ª 0
+rem echo Last ~ ëŠ” ëª¨ë‘ ê¸°ë³¸ê°’ 0
 
 reg add "HKEY_CURRENT_USER\Control Panel\Keyboard" /v KeyboardSpeed /d 48 /f
-rem echo ÀÌ ¸í·É¾î´Â ²Ú ´­·¶À» ¶§ ¹İÀÀ¼Óµµ Á¶Àı ±âº»°ª 31
+rem echo ì´ ëª…ë ¹ì–´ëŠ” ê¾¹ ëˆŒë €ì„ ë•Œ ë°˜ì‘ì†ë„ ì¡°ì ˆ ê¸°ë³¸ê°’ 31
 
 pause
